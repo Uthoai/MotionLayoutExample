@@ -9,10 +9,34 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/person1"
+        android:id="@+id/profilePic"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/profile_pic"
         app:shapeAppearanceOverlay="@style/circleImageView" />
+
+    <ImageView
+        android:id="@+id/topProfileBG"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/top_profile_bg"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Md Mehedi Hasan"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp">
+        //
+    </ScrollView>
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

@@ -5,8 +5,9 @@
         motion:constraintSetStart="@+id/start"
         motion:constraintSetEnd="@+id/end"
         motion:duration="1000">
+
         <OnClick
-            motion:targetId="@id/person1"
+            motion:targetId="@id/profilePic"
             motion:clickAction="toggle"
             />
 
@@ -15,30 +16,68 @@
     <ConstraintSet android:id="@+id/start">
 
         <Constraint
-            android:id="@+id/person1"
+            android:id="@+id/topProfileBG"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            android:layout_width="100dp"
-            android:layout_height="100dp">
-            <CustomAttribute
-                motion:attributeName="rotation"
-                motion:customFloatValue="360" />
-        </Constraint>
+            android:layout_width="match_parent"
+            android:layout_height="220dp"/>
+
+        <Constraint
+            android:id="@+id/profilePic"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/topProfileBG"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <Constraint
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            motion:layout_constraintTop_toTopOf="@id/profilePic"
+            motion:layout_constraintBottom_toBottomOf="@id/profilePic"
+            motion:layout_constraintStart_toEndOf="@id/profilePic"/>
+
+        <Constraint
+            android:id="@+id/scrollView"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintTop_toBottomOf="@id/profilePic"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"/>
 
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
 
         <Constraint
-            android:id="@id/person1"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            android:layout_width="100dp"
-            android:layout_height="100dp">
-            <CustomAttribute
-                motion:attributeName="rotation"
-                motion:customFloatValue="0" />
-        </Constraint>
+            android:id="@+id/topProfileBG"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.2"
+            android:scaleX="0"
+            android:scaleY="0"/>
+
+        <Constraint
+            android:id="@id/profilePic"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/topProfileBG"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_width="76dp"
+            android:layout_height="76dp" />
+
+        <Constraint
+            android:id="@id/tv_name"
+            android:layout_marginStart="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="@id/profilePic"
+            motion:layout_constraintBottom_toBottomOf="@id/profilePic"
+            motion:layout_constraintStart_toEndOf="@id/profilePic"/>
 
     </ConstraintSet>
 </MotionScene>
