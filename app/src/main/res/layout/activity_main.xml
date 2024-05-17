@@ -8,7 +8,7 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity">
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <!--<com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profilePic"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -29,14 +29,14 @@
         android:layout_height="wrap_content"
         android:text="Md Mehedi Hasan"
         android:textStyle="bold"
-        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"/>
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"/>-->
 
-    <ScrollView
-        android:id="@+id/scrollView"
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="32dp">
-        //
-    </ScrollView>
+        android:layout_height="220dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/nature_bg"
+        tools:ignore="ContentDescription" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
